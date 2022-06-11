@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'show', :media => "all" %>
+<div class="cleaning-container">
+<h3>やり方詳細</h3>
+  <div class="title container">
+    <p><%= @tweet.title %></p>
+  </div>
+
+  <div class="doing container">
+    <p><%= @tweet.body1 %></p>
+      <%= image_tag @tweet.image1_url, size: "250x200" if @tweet.image1? %>
+    <p><%= @tweet.body2 %></p>
+      <%= image_tag @tweet.image2_url, size: "250x200" if @tweet.image2? %>
+    <p><%= @tweet.body3 %></p>
+      <%= image_tag @tweet.image3_url, size: "250x200" if @tweet.image3? %>
+    <p><%= @tweet.body4 %></p>
+      <%= image_tag @tweet.image4_url, size: "250x200" if @tweet.image4? %>
+  </div>
+
+  <div class time-container>
+    場所<p><%= @tweet.place %></p>
+    所要時間<p><%= @tweet.time %></p>
+    道具<p><%= @tweet.item %></p>
+    <p><%= @tweet.created_at %></p>
+  </div>
+
+<%= link_to "編集する", edit_tweet_path(@tweet.id) %>
+見られた数
+<%=  @tweet.impressionist_count %>
+</div>

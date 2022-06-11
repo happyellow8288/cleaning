@@ -1,0 +1,97 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="event">
+        <%= image_tag 'toppage2.jpg' %>
+</div>
+
+<div class="posts-container">
+  <h3>掃除一覧</h3>
+  <div class="cleaning">
+      <a href="#">
+        <%= link_to 'キッチン', :controller => "tweets", :action => "page1" %>
+      </a>
+      <div class="up">
+      <%= image_tag 'kitchen.jpg', size: '70%×70%'%>
+      </div>
+  </div>
+  <div class="cleaning">
+      <a href="" class="#">
+        <%= link_to '机', :controller => "tweets", :action => "page2" %>
+      </a>
+      <div class="up">
+        <%= image_tag 'desk.jpg', size: '70%×70%'%>
+      </div>
+  </div>
+  <div class="cleaning">
+      <a href="#">
+        <%= link_to '棚', :controller => "tweets", :action => "page3" %>
+      </a>
+      <div class="up">
+        <%= image_tag 'shelf.jpg', size: '60%×60%'%>
+      </div>
+  </div>
+  <div class ="cleaning">
+      <a href="#">
+        <%= link_to 'エアコン', :controller => "tweets", :action => "page4" %>
+      </a>
+      <div class="up">
+        <%= image_tag 'air.jpg', size: '70%×70%'%>
+      </div>
+  </div>
+  <div class="cleaning">
+      <a href="#">
+        <%= link_to '風呂場', :controller => "tweets", :action => "page5" %>
+      </a>
+      <div class="up">
+        <%= image_tag 'bathroom.jpg', size: '70%×70%'%>
+      </div>
+  </div>
+  <div class="cleaning">
+      <a href="#">
+        <%= link_to '床', :controller => "tweets", :action => "page6" %>
+      </a>
+      <div class="up">
+        <%= image_tag 'floor.jpg', size: '70%×70%'%>
+      </div>
+  </div>
+</div>
+
+<div class="tweets-container">
+  <h3>記事を検索</h3>
+  <div class="cleaning2">
+    <%= form_tag({controller:"tweets",action:"index"}, method: :get) do %>
+  </div>
+    <%= text_field_tag :search %>
+    
+    <button type="submit">検索する</button>
+    
+  <% end %>
+</div>
+
+<div class="tweet">
+  <h3>記事一覧</h3>
+  <% @tweets.each do |t| %>
+      <div class="main-container">
+        <div class="first-container">
+          <%= t.title %>
+        </div>
+        <div class="second-container">
+          <%= image_tag t.image1_url, size: "250x200" if t.image1? %>
+        </div>
+        <div class="third-container">
+          <%= t.place %>
+        </div>
+        <div class="fourth-container">
+          <%= link_to "詳細へ", tweet_path(t.id) %>
+        </div>
+        <div class="fifth-container">
+          <%= t.created_at %>
+        </div>
+        <div class="sixth-container">
+          <%= t.user.email %>
+        </div>
+        <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+      </div>
+  <% end %>
+</div>
+

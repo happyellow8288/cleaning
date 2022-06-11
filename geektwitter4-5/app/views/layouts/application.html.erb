@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Sunshineクリーニング</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header>
+        <div class="image-1">
+          <%= image_tag 'header5.jpg' %>
+        </div>
+        <nav>
+        <ul>
+          <li><a href="#"><%= link_to "記事一覧", "/tweets/article" %></a></li>
+          <li><a href="#"><%= link_to "ホーム", tweets_path %></a></li>
+          <li><a href="#"><%= link_to "新規投稿",new_tweet_path %></a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p>Copyright © All Rights Reserved.</p>
+    </footer>
+    
+  </body>
+
+</html>

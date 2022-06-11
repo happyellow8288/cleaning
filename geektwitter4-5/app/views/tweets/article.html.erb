@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag 'article', :media => "all" %>
+
+<div class="tweet">
+    <% @tweets.each do |t| %>
+        <div class="main-container">
+        <div class="first-container">
+            <%= t.title %>
+        </div>
+        <div class="second-container">
+            <%= image_tag t.image1_url, size: "250x200" if t.image1? %>
+        </div>
+        <div class="third-container">
+            場所：<%= t.place %>
+        </div>
+        <div class="fourth-container">
+            <%= link_to "詳細へ", tweet_path(t.id) %>
+        </div>
+        <div class="fifth-container">
+            日にち：<%= t.created_at %>
+        </div>
+        <div class="sixth-container">
+            <%= t.user.email %>
+        </div>
+        </div>
+    <% end %>
+</div>

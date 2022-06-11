@@ -1,0 +1,70 @@
+<%= stylesheet_link_tag 'new', :media => "all" %>
+<div class="post-container">
+  <h1>GeekTwitter</h1>
+  <h3>新規Tweet</h3>
+  <%= form_for @tweet do |f| %>
+  
+  <div class="field">
+  <%= f.label "タイトル" %>
+  <%= f.text_field :title, :size => 140 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "①" %>
+    <%= f.text_field :body1, :size => 140 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "②" %>
+    <%= f.text_field :body2, :size => 140 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "③" %>
+    <%= f.text_field :body3, :size => 140 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "④" %>
+    <%= f.text_field :body4, :size => 140 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "場所" %>
+    <%= f.text_field :place, :size => 140 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "所要時間" %>
+    <%= f.text_field :time, :size => 140 %>
+  </div>
+
+  <div class="field">
+  <%= f.label "道具" %>
+  <%= f.text_field :item, :size => 140 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "写真" %>
+    <%= f.file_field :image1 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "写真" %>
+    <%= f.file_field :image2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "写真" %>
+    <%= f.file_field :image3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "写真" %>
+    <%= f.file_field :image4 %>
+  </div>
+  
+  <%= f.submit "Tweetする" %>
+  <% end %>
+  <%= link_to "Tweet一覧に戻る", tweets_path %>
+</div>

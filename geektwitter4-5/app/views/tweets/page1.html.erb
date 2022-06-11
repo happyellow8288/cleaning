@@ -1,0 +1,20 @@
+<h1>キッチン</h1>
+
+<div class="tweets-container">
+  <% @kitchens.each do |t| %>
+
+    <div class="tweet">
+        <%= t.title %>
+        <%= t.place %>
+        <%= image_tag t.image1_url, size: "250x200" if t.image1? %>
+        <%= image_tag t.image2_url, size: "250x200" if t.image2? %>
+        <%= image_tag t.image3_url, size: "250x200" if t.image3? %>
+        <%= image_tag t.image4_url, size: "250x200" if t.image4? %> 
+        <%= t.created_at %>
+        <%= link_to "詳細へ", tweet_path(t.id) %>
+        <%= link_to "編集する", edit_tweet_path(t.id) %>
+        <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+        <%= t.user.email %>
+    </div>
+  <% end %>
+</div>

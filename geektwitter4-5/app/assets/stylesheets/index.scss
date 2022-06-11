@@ -1,0 +1,102 @@
+.tweets-container {
+  width: 50%;
+  margin: 10px auto;
+  border: solid 3px rgb(230, 118, 118);
+  text-align: center;
+}
+
+.event img {
+  padding: 10px;
+  width: 1500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.radius-percent-0 {
+  box-shadow: 0px 0px 3px orange;
+}
+
+.posts-container {
+  flex-wrap: wrap;
+  margin: 70px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.cleaning  {
+  background-color: rgb(245, 202, 121);
+  width: 12%;
+  height: 200px;
+  margin: 2%;
+  text-align: center;
+}
+
+.a cleaning {
+  margin: 10px;
+}
+
+.up img{
+  margin: 10%;
+}
+
+h3 {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+  color: orange;
+  font-family: "游ゴシック";
+  font-size: 25px;
+}
+
+.cleaning2 {
+  margin: 10px;
+}
+
+.tweet {
+  margin-top: 100px;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  border: solid 3px black;
+  width: 20%;
+  margin: 10px;
+  height: 50%;
+}
+
+.first-container {
+  margin: 10px;
+  font-weight: bold;
+}
+.second-container {
+  text-align: center;
+}
+
+.third-container {
+  margin: 10px;
+}
+
+.fourth-container {
+  margin: 10px;
+}
+
+.fifth-container {
+  margin: 10px;
+}
+
+.sixth-container {
+  margin: 10px;
+}
+
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
